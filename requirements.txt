@@ -1,0 +1,47 @@
+# =============================================================================
+# Kinetics Beyond Pose — Python dependencies
+# =============================================================================
+# The notebook (mini_training.ipynb) was developed and executed with:
+#   Python 3.12.9
+#
+# Versions explicitly cited in the notebook ("Software Environment" cell)
+# are pinned with == to guarantee reproducibility of the published results.
+# All other dependencies are left unpinned so pip can resolve a compatible
+# set against those pins.
+#
+# Recommended install (clean environment):
+#   python -m venv venv
+#   source venv/bin/activate
+#   pip install -r requirements.txt
+# =============================================================================
+
+# --- Pinned (explicitly cited in the notebook) -------------------------------
+numpy==2.2.6
+pandas==2.2.3
+scikit-learn==1.6.1
+torch==2.7.1
+
+# --- Deep learning / embeddings ---------------------------------------------
+transformers
+tokenizers
+huggingface-hub
+safetensors
+sentencepiece
+
+# --- Cheminformatics ---------------------------------------------------------
+rdkit
+
+# --- Gradient boosting & hyperparameter optimization -------------------------
+xgboost
+optuna
+
+# --- Scientific stack --------------------------------------------------------
+scipy
+
+# --- Utilities ---------------------------------------------------------------
+tqdm
+
+# --- Notebook execution environment ------------------------------------------
+jupyter
+ipykernel
+ipywidgets

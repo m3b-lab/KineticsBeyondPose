@@ -1,6 +1,6 @@
 # Kinetics Beyond Pose
 
-This repository contains the data and code accompanying the paper on structure-independent prediction of protein–ligand dissociation kinetics (\(k_{\mathrm{off}}\)) from protein sequence and ligand SMILES.
+This repository contains the data and code accompanying the paper on structure-independent prediction of protein–ligand dissociation kinetics ($k_{\mathrm{off}}$) from protein sequence and ligand SMILES.
 
 The repository includes:
 
@@ -8,11 +8,11 @@ The repository includes:
 - the **training** and **held-out test** partitions used for model development and final evaluation;
 - the **`workflow.ipynb`** notebook, which reproduces the end-to-end pipeline described in the manuscript, including data loading, preprocessing, model selection, training, and evaluation.
 
-> **Try the model online:** a deployed version of the \(k_{\mathrm{off}}\) predictor — based on the final model presented in this manuscript — is available as a web application at **[\<URL\>](<URL>)**. No installation required: provide a protein sequence and a ligand SMILES, and the predicted \(k_{\mathrm{off}}\) will be returned directly in the browser.
+> **Try the model online:** a deployed version of the $k_{\mathrm{off}}$ predictor — based on the final model presented in this manuscript — is available as a web application at **[\<URL\>](<URL>)**. No installation required: provide a protein sequence and a ligand SMILES, and the predicted $k_{\mathrm{off}}$ will be returned directly in the browser.
 
 ## Overview
 
-Ligand–receptor dissociation kinetics are highly informative for pharmacological behavior, but remain difficult to measure experimentally and expensive to estimate through simulation-based methods. In this work, we developed a machine-learning pipeline that predicts \(k_{\mathrm{off}}\) using only:
+Ligand–receptor dissociation kinetics are highly informative for pharmacological behavior, but remain difficult to measure experimentally and expensive to estimate through simulation-based methods. In this work, we developed a machine-learning pipeline that predicts $k_{\mathrm{off}}$ using only:
 
 - the **amino acid sequence** of the protein target;
 - the **canonical SMILES** representation of the ligand.
@@ -40,14 +40,14 @@ Importantly, the pipeline does **not** require:
 
 ## Files
 
-- **`curated_dataset.csv`** — Curated dataset assembled from the literature and used as the starting point for this study. It contains protein–ligand complexes annotated with experimentally determined \(k_{\mathrm{off}}\) values and the identifiers needed for sequence- and ligand-based processing.
+- **`curated_dataset.csv`** — Curated dataset assembled from the literature and used as the starting point for this study. It contains protein–ligand complexes annotated with experimentally determined $k_{\mathrm{off}}$ values and the identifiers needed for sequence- and ligand-based processing.
 - **`train.csv`** — Training partition used for model selection, hyperparameter optimization, and model development.
 - **`test.csv`** — Independent held-out test set, reserved before model development and used only for the final evaluation reported in the paper.
 - **`workflow.ipynb`** — Jupyter notebook implementing the full analysis workflow described in the manuscript, including:
   - dataset loading;
   - preprocessing and curation steps;
   - outlier removal;
-  - stratified train/test splitting based on \(k_{\mathrm{off}}\) bins;
+  - stratified train/test splitting based on $k_{\mathrm{off}}$ bins;
   - nested cross-validation for model selection and hyperparameter tuning;
   - standard cross-validation of the selected model for further tuning;
   - retraining of the tuned model on the full training set;
@@ -72,7 +72,7 @@ The predictive pipeline follows the strategy described in the paper:
 1. **Protein representation** — Protein sequences are encoded using embeddings derived from a pretrained protein language model.
 2. **Ligand representation** — Ligand SMILES are encoded using embeddings derived from a pretrained molecular language model.
 3. **Feature integration** — Protein and ligand embeddings are combined into a joint numerical representation of each protein–ligand pair.
-4. **Regression model** — A downstream machine-learning regressor is trained to predict \(k_{\mathrm{off}}\) (the transformed target p(koff) used in the manuscript).
+4. **Regression model** — A downstream machine-learning regressor is trained to predict $k_{\mathrm{off}}$ (the transformed target p(koff) used in the manuscript).
 5. **Evaluation** — Model performance is assessed through nested cross-validation, standard cross-validation, and final testing on a held-out external partition.
 
 ## Requirements
@@ -111,7 +111,7 @@ Then run the notebook cells in order.
 
 ## Deployed web application
 
-For users who simply want to obtain \(k_{\mathrm{off}}\) predictions for new protein–ligand pairs without setting up a local environment, a deployed version of the predictor is available online:
+For users who simply want to obtain $k_{\mathrm{off}}$ predictions for new protein–ligand pairs without setting up a local environment, a deployed version of the predictor is available online:
 
 **Web application:** [<URL>](<URL>)
 
@@ -120,7 +120,7 @@ The web interface wraps the **final model trained as described in this manuscrip
 - a **protein amino-acid sequence**, and
 - a **canonical SMILES** string of the ligand,
 
-it returns the predicted \(k_{\mathrm{off}}\) value (or its transformed equivalent, p(koff), as reported in the paper).
+it returns the predicted $k_{\mathrm{off}}$ value (or its transformed equivalent, p(koff), as reported in the paper).
 
 This deployment is intended to make the model directly usable by experimentalists and medicinal chemists who do not need to retrain or re-derive the pipeline locally. For full reproducibility of the training and evaluation procedure — including data curation, splitting, model selection, and held-out testing — please refer to `workflow.ipynb` in this repository.
 

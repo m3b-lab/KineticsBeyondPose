@@ -30,7 +30,7 @@ Importantly, the pipeline does **not** require:
 
 ```text
 .
-├── curated_dataset.csv
+├── dataset.csv
 ├── train.csv
 ├── test.csv
 ├── workflow.ipynb

@@ -182,7 +182,7 @@ tb_logs/
 runs/
 
 # -----------------------------------------------------------------------------
-# Project-specific outputs (add as needed)
+# Project-specific outputs
 # -----------------------------------------------------------------------------
 # Embedding caches and intermediate tensors
 embeddings/
@@ -192,10 +192,6 @@ embeddings/
 # Logs
 *.log
 logs/
-
-# Generated figures / reports (uncomment if you do not want them tracked)
-# figures/
-# reports/
 
 # -----------------------------------------------------------------------------
 # Misc

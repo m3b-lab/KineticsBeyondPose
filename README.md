@@ -40,7 +40,7 @@ Importantly, the pipeline does **not** require:
 
 ## Files
 
-- **`curated_dataset.csv`** — Curated dataset assembled from the literature and used as the starting point for this study. It contains protein–ligand complexes annotated with experimentally determined $k_{\mathrm{off}}$ values and the identifiers needed for sequence- and ligand-based processing.
+- **`dataset.csv`** — Curated dataset assembled from the literature and used as the starting point for this study. It contains protein–ligand complexes annotated with experimentally determined $k_{\mathrm{off}}$ values and the identifiers needed for sequence- and ligand-based processing.
 - **`train.csv`** — Training partition used for model selection, hyperparameter optimization, and model development.
 - **`test.csv`** — Independent held-out test set, reserved before model development and used only for the final evaluation reported in the paper.
 - **`workflow.ipynb`** — Jupyter notebook implementing the full analysis workflow described in the manuscript, including:
@@ -63,7 +63,7 @@ The notebook is intended to allow readers to reproduce the main computational pi
 - final model retraining;
 - evaluation on the independent held-out test set.
 
-Where applicable, the notebook also reproduces the performance metrics reported in the manuscript.
+The notebook also reproduces the performance metrics reported in the manuscript.
 
 ## Methodological summary
 
@@ -113,20 +113,20 @@ Then run the notebook cells in order.
 
 For users who simply want to obtain $k_{\mathrm{off}}$ predictions for new protein–ligand pairs without setting up a local environment, a deployed version of the predictor is available online:
 
-**Web application:** [<URL>](<URL>)
+**Web application:** [https://kinetics.m3b.it](https://kinetics.m3b.it)
 
 The web interface wraps the **final model trained as described in this manuscript**, applied through the same pretrained protein and ligand language model encoders used during development. Given:
 
 - a **protein amino-acid sequence**, and
 - a **canonical SMILES** string of the ligand,
 
-it returns the predicted $k_{\mathrm{off}}$ value (or its transformed equivalent, p(koff), as reported in the paper).
+it returns the predicted $k_{\mathrm{off}}$ value.
 
 This deployment is intended to make the model directly usable by experimentalists and medicinal chemists who do not need to retrain or re-derive the pipeline locally. For full reproducibility of the training and evaluation procedure — including data curation, splitting, model selection, and held-out testing — please refer to `workflow.ipynb` in this repository.
 
 ## Notes on the data
 
-- The dataset provided here is the curated version used in the study.
+- The dataset provided here is the original version used in the study.
 - The `train.csv` and `test.csv` files correspond to the partitions used in the manuscript. Choosing a different random state might result in different train/test partitioning.
 - The held-out test set was not used during model development, and only employed once at the end of the pipeline for testing.
 - The pipeline is designed to be reproducible from the files included in this repository.
@@ -136,7 +136,7 @@ This deployment is intended to make the model directly usable by experimentalist
 If you use this repository, data, or workflow in your work, please cite the associated paper:
 
 ```bibtex
-@article{yourpaper2026,
+@article{Zizzi2026,
   title   = {Kinetics Beyond Pose: A Structure-independent Framework for koff Prediction Across Diverse Protein Families},
   author  = {[Eric A. Zizzi, Giuseppe Cicero, Marco A. Deriu]},
   journal = {[Journal]},

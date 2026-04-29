@@ -8,7 +8,7 @@ The repository includes:
 - the **training** and **held-out test** partitions used for model development and final evaluation;
 - the **`workflow.ipynb`** notebook, which reproduces the end-to-end pipeline described in the manuscript, including data loading, preprocessing, model selection, training, and evaluation.
 
-> **Try the model online:** a deployed version of the $k_{\mathrm{off}}$ predictor — based on the final model presented in this manuscript — is available as a web application at **[\<URL\>](<URL>)**. No installation required: provide a protein sequence and a ligand SMILES, and the predicted $k_{\mathrm{off}}$ will be returned directly in the browser.
+> **Try the model online:** a deployed version of the $k_{\mathrm{off}}$ predictor — based on the final model presented in this manuscript — is available as a web application at **[https://kinetics.m3b.it](https://kinetics.m3b.it)**. No installation required: provide a protein sequence and a ligand SMILES, and the predicted $k_{\mathrm{off}}$ will be returned directly in the browser.
 
 ## Overview
 

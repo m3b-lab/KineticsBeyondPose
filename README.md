@@ -138,19 +138,18 @@ If you use this repository, data, or workflow in your work, please cite the asso
 ```bibtex
 @article{Zizzi2026,
   title   = {Kinetics Beyond Pose: A Structure-independent Framework for koff Prediction Across Diverse Protein Families},
-  author  = {[Eric A. Zizzi, Giuseppe Cicero, Marco A. Deriu]},
-  journal = {[Journal]},
-  year    = {[Year]},
-  volume  = {[Volume]},
-  pages   = {[Pages]},
-  doi     = {[DOI]}
+  author  = {Zizzi, Eric A. and Cicero, Giuseppe and Gentile, Francesco and Deriu, Marco A.},
+  journal = {ChemRxiv},
+  year    = {2026},
+  doi     = {10.26434/chemrxiv.15003308/v1},
+  url     = {https://doi.org/10.26434/chemrxiv.15003308/v1}
 }
 ```
 
 ## License
 
-- **Code:** MIT License
-- **Data:** CC BY 4.0
+- **Code:** CC BY NC ND 4.0
+- **Data:** CC BY NC ND 4.0
 
 ## Contact
 
@@ -163,5 +162,3 @@ This work was supported by the project **FISA-2023-00313 "LangMol"**, funded by 
 The present research was carried out as part of the **GALATEA** project. The GALATEA project has received funding from the **Horizon Europe** research and innovation programme under the **Marie Skłodowska-Curie Grant Agreement No. 101183057** ([https://galateahe.eu/](https://galateahe.eu/)).
 
 ---
-
-This repository is intended to make the computational workflow described in the manuscript transparent, inspectable, and reproducible — which, in computational kinetics, is rarely a bad place to start.
